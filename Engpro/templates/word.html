@@ -1,0 +1,33 @@
+{% extends 'base.html' %}
+{% block title %}生词表{% endblock %}
+{% block position %}生词表{% endblock %}
+{% block position2 %}生词表{% endblock %}
+
+{% block body_content %}
+    <div class="page-shop-sidebar left--sidebar bg--white section-padding--lg">
+        <div class="container">
+            <div class="page__header">
+                <h2>我的生词表</h2>
+            </div>
+            <div class="word_div">
+            {% for word in word_data %}
+                <div class="word_li">{{ word.word }}</div>
+            {% endfor %}
+            </div>
+            <div class="page__header">
+                <h2>添加生词</h2>
+            </div>
+            <form id="word-form" action="" method="post">
+                {% csrf_token %}
+                <div class="single-contact-form ">
+                    <input type="text" name="add_word" required>
+                </div>
+                <div class="contact-btn">
+                    <button type="submit">添加</button>
+                </div>
+
+            </form>
+        </div>
+    </div>
+
+{% endblock %}

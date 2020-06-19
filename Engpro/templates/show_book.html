@@ -1,0 +1,21 @@
+{% extends 'base.html' %}
+{% block title %}文章{% endblock %}
+{% block position %}文章{% endblock %}
+{% block position2 %}文章{% endblock %}
+
+{% block body_content %}
+    <!-- Start main Content -->
+    <div class="container detail_con">
+    {% for data in book_data %}
+        <div class="detail_title">
+            <h3>{{ data.title }}</h3>
+        </div>
+        <div class="detail_content">
+            {{ data.content }}
+        </div>
+
+    {% endfor %}
+    </div>
+    <!-- End main Content -->
+
+{% endblock %}

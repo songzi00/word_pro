@@ -1,0 +1,106 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ChangeListManager">
+    <list default="true" id="daec2177-eac1-48d6-9aa1-1c5c7148d3be" name="默认更改列表" comment="" />
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="Python Script" />
+      </list>
+    </option>
+  </component>
+  <component name="ProjectId" id="1chZtacyCQ3hCQMVeAu80J19p4s" />
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showExcludedFiles" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent">
+    <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
+    <property name="WebServerToolWindowFactoryState" value="false" />
+    <property name="node.js.detected.package.eslint" value="true" />
+    <property name="node.js.detected.package.tslint" value="true" />
+    <property name="node.js.path.for.package.eslint" value="project" />
+    <property name="node.js.path.for.package.tslint" value="project" />
+    <property name="node.js.selected.package.eslint" value="(autodetect)" />
+    <property name="node.js.selected.package.tslint" value="(autodetect)" />
+    <property name="settings.editor.selected.configurable" value="com.jetbrains.python.configuration.PyActiveSdkModuleConfigurable" />
+  </component>
+  <component name="RunManager">
+    <configuration name="1" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
+      <module name="u1" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <EXTENSION ID="PythonCoverageRunConfigurationExtension" runner="coverage.py" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/1.py" />
+      <option name="PARAMETERS" value="" />
+      <option name="SHOW_COMMAND_LINE" value="false" />
+      <option name="EMULATE_TERMINAL" value="false" />
+      <option name="MODULE_MODE" value="false" />
+      <option name="REDIRECT_INPUT" value="false" />
+      <option name="INPUT_FILE" value="" />
+      <method v="2" />
+    </configuration>
+    <recent_temporary>
+      <list>
+        <item itemvalue="Python.1" />
+      </list>
+    </recent_temporary>
+  </component>
+  <component name="SvnConfiguration">
+    <configuration />
+  </component>
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="daec2177-eac1-48d6-9aa1-1c5c7148d3be" name="默认更改列表" comment="" />
+      <created>1590983000835</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1590983000835</updated>
+      <workItem from="1590983004625" duration="171000" />
+      <workItem from="1590983181975" duration="1739000" />
+    </task>
+    <servers />
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="1" />
+  </component>
+  <component name="WindowStateProjectService">
+    <state x="547" y="220" key="#com.intellij.fileTypes.FileTypeChooser" timestamp="1590985024059">
+      <screen x="0" y="23" width="1440" height="775" />
+    </state>
+    <state x="547" y="220" key="#com.intellij.fileTypes.FileTypeChooser/0.23.1440.775@0.23.1440.775" timestamp="1590985024059" />
+    <state width="1398" height="197" key="GridCell.Tab.0.bottom" timestamp="1590983783643">
+      <screen x="0" y="23" width="1440" height="775" />
+    </state>
+    <state width="1398" height="197" key="GridCell.Tab.0.bottom/0.23.1440.775@0.23.1440.775" timestamp="1590983783643" />
+    <state width="1398" height="197" key="GridCell.Tab.0.center" timestamp="1590983783641">
+      <screen x="0" y="23" width="1440" height="775" />
+    </state>
+    <state width="1398" height="197" key="GridCell.Tab.0.center/0.23.1440.775@0.23.1440.775" timestamp="1590983783641" />
+    <state width="1398" height="197" key="GridCell.Tab.0.left" timestamp="1590983783640">
+      <screen x="0" y="23" width="1440" height="775" />
+    </state>
+    <state width="1398" height="197" key="GridCell.Tab.0.left/0.23.1440.775@0.23.1440.775" timestamp="1590983783640" />
+    <state width="1398" height="197" key="GridCell.Tab.0.right" timestamp="1590983783642">
+      <screen x="0" y="23" width="1440" height="775" />
+    </state>
+    <state width="1398" height="197" key="GridCell.Tab.0.right/0.23.1440.775@0.23.1440.775" timestamp="1590983783642" />
+  </component>
+  <component name="com.intellij.coverage.CoverageDataManagerImpl">
+    <SUITE FILE_PATH="coverage/u1$1.coverage" NAME="1 Coverage Results" MODIFIED="1590983783623" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
+  </component>
+</project>

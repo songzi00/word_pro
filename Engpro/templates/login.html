@@ -1,0 +1,32 @@
+{% extends 'base.html' %}
+{% block title %}登录{% endblock %}
+{% block position %}登录{% endblock %}
+{% block position2 %}登录{% endblock %}
+
+{% block body_content %}
+    <section class="wn_contact_area bg--white pt--80">
+        	<div class="container">
+        		<div class="row">
+                    <div class="col-lg-8 col-12">
+        				<div class="contact-form-wrap">
+        					<h2 class="contact__title">登录</h2>
+                            <form action="{% url 'myauth:slogin' %}" method="post">
+                                {% csrf_token %}
+                                <div class="single-contact-form space-between">
+                                    {{ login_form.username.label_tag }}
+                                    {{ login_form.username }}
+                                </div>
+                                <div class="single-contact-form space-between">
+                                    {{ login_form.password.label_tag }}
+                                    {{ login_form.password }}
+                                </div>
+                                <div class="contact-btn">
+                                    <button type="submit">提交</button>
+                                </div>
+                            </form>
+                        </div>
+        			</div>
+                </div>
+            </div>
+    </section>
+{% endblock %}

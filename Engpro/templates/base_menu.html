@@ -1,0 +1,118 @@
+<!doctype html>
+{% load static %}
+<html class="no-js" lang="zxx">
+<head>
+	<meta charset="utf-8">
+	<meta http-equiv="x-ua-compatible" content="ie=edge">
+	<title>BOOK | {% block title %}{% endblock %}</title>
+	<meta name="description" content="">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+
+	<!-- Favicons -->
+	<link rel="shortcut icon" href="{% static 'images/favicon.ico' %}">
+	<link rel="apple-touch-icon" href="{% static 'images/icon.png' %}">
+
+	<!-- Google font (font-family: 'Roboto', sans-serif; Poppins ; Satisfy) -->
+	<link href="https://fonts.googleapis.com/css?family=Open+Sans:300,400,600,700,800" rel="stylesheet">
+	<link href="https://fonts.googleapis.com/css?family=Poppins:300,300i,400,400i,500,600,600i,700,700i,800" rel="stylesheet">
+	<link href="https://fonts.googleapis.com/css?family=Roboto:100,300,400,500,700,900" rel="stylesheet">
+
+	<!-- Stylesheets -->
+	<link rel="stylesheet" href="{% static 'css/bootstrap.min.css' %}">
+	<link rel="stylesheet" href="{% static 'css/plugins.css' %}">
+	<link rel="stylesheet" href="{% static 'css/style.css' %}">
+
+	<!-- Cusom css -->
+   <link rel="stylesheet" href="{% static 'css/custom.css' %}">
+
+	<!-- Modernizer js -->
+	<script src="{% static 'js/vendor/modernizr-3.5.0.min.js' %}"></script>
+</head>
+<body>
+	<!-- Main wrapper -->
+	<div class="wrapper" id="wrapper">
+		<!-- 导航栏 -->
+		<header id="wn__header" class="header__area header__absolute sticky__header">
+			<div class="container-fluid">
+				<div class="all_menus">
+					<div class="">
+						<div class="logo">
+							<a href="{% url 'myauth:index' %}">
+								<img src="{% static 'images/logo/logo.png' %}" alt="logo images">
+							</a>
+						</div>
+					</div>
+
+					<div class="my_menus">
+						<ul class="header__sidebar__right d-flex justify-content-end align-items-center">
+                            {% if request.session.is_login %}
+                                <li class="shop_search"><a class="search__active" href="#"></a></li>
+							    <li class="wishlist"><a href="{% url 'myauth:recommd2' %}"></a></li>
+                                <li class="book"><a href="{% url 'myauth:word' %}"></a></li>
+							    <li class="menus">{{ request.session.user_name }}</li>
+                                <li class="menus"><a class="" href="{% url 'myauth:slogout' %}">登出</a></li>
+                            {% else %}
+                                <li class="menus"><a class=""  href="{% url 'myauth:register' %}">注册</a></li>
+                                <li class="menus"><a class=""  href="{% url 'myauth:slogin' %}">登录</a></li>
+                            {% endif %}
+
+						</ul>
+					</div>
+				</div>
+	            <div class="mobile-menu d-block d-lg-none">
+	            </div>
+	            <!-- Mobile Menu -->
+			</div>
+		</header>
+		<!-- 结束导航栏 -->
+
+		<!-- Start Search Popup -->
+		<div class="brown--color box-search-content search_active block-bg close__top">
+			<form class="minisearch" action="{% url 'myauth:search' %}" method="post">
+                {% csrf_token %}
+				<div class="field__search">
+					<input type="text" name="book_search" placeholder="请输入您想查询的文章..." required>
+					<div class="action">
+						<button type="submit">🔍</button>
+					</div>
+				</div>
+			</form>
+			<div class="close__wrap">
+				<span>close</span>
+			</div>
+		</div>
+		<!-- End Search Popup -->
+
+        {% block content %}{% endblock %}
+
+		<!-- Footer Area -->
+		<footer id="wn__footer" class="footer__area bg__cat--8 brown--color">
+			<div class="footer-static-top">
+				<div class="container">
+					<div class="row">
+						<div class="col-lg-12">
+							<div class="footer__widget footer__menu">
+								<div class="ft__logo">
+									<a href="index.html">
+										<img src="{% static 'images/logo/3.png' %}" alt="logo">
+									</a>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</footer>
+		<!-- //Footer Area -->
+	</div>
+	<!-- //Main wrapper -->
+
+	<!-- JS Files -->
+	<script src="{% static 'js/vendor/jquery-3.2.1.min.js' %}"></script>
+	<script src="{% static 'js/popper.min.js' %}"></script>
+	<script src="{% static 'js/bootstrap.min.js' %}"></script>
+	<script src="{% static 'js/plugins.js' %}"></script>
+	<script src="{% static 'js/active.js' %}"></script>
+
+</body>
+</html>

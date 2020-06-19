@@ -1,0 +1,33 @@
+{% extends 'base.html' %}
+{% block title %}推荐{% endblock %}
+{% block position %}推荐{% endblock %}
+{% block position2 %}推荐{% endblock %}
+
+{% block body_content %}
+    <div class="page-shop-sidebar left--sidebar bg--white section-padding--lg">
+        <div class="container">
+            <h3 class="search_title">您好{{ user_name }}！以下是为您推荐的文章</h3>
+            <div class="row" style="justify-content: center">
+            {% if data %}
+                <!-- 图书循环 -->
+                <div class="book_ul">
+                {# 循环图书 #}
+                {% for book in similar_data %}
+                <!-- Start Single Product -->
+                    <div class="book_li">
+                        <h3><a href="{% url 'myauth:details' book.id %}">{{ book.title }}</a></h3>
+                        <div class="book_con">{{ book.content }}</div>
+                        <div class="book_info"><a class="shopbtn" href="{% url 'myauth:details' book.id %}">阅读全文</a></div>
+                    </div>
+                <!-- Start Single Product -->
+                {% endfor %}
+                </div>
+                <!-- End 图书 -->
+            {% else %}
+                <div class="alert alert-danger" role="alert">您暂无添加任何生词，故无法为您推荐文章。您可以<a href="{% url 'myauth:word' %}">前往生词表页面</a></div>
+            </div>
+            {% endif %}
+        </div>
+    </div>
+
+{% endblock %}

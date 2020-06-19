@@ -1,0 +1,47 @@
+{% extends 'base.html' %}
+{% block title %}注册{% endblock %}
+{% block position %}注册{% endblock %}
+{% block position2 %}注册{% endblock %}
+
+{% block body_content %}
+    <section class="wn_contact_area bg--white pt--80">
+        	<div class="container">
+        		<div class="row">
+                    <div class="col-lg-8 col-12">
+        				<div class="contact-form-wrap">
+        					<h2 class="contact__title">注册</h2>
+                            {% if registerform.errors %}
+                                <div class="error">{{ registerform.errors }}</div>
+                            {% endif %}
+                            <form action="" method="post">
+                                {% csrf_token %}
+                                <div class="single-contact-form space-between" style="margin:20px 0;" >
+                                    {{ register_form.username.label_tag }}
+				                    {{ register_form.username}}
+                                </div>
+                                <div class="single-contact-form space-between" style="margin:20px 0;">
+                                    {{ register_form.password1.label_tag }}
+				                    {{ register_form.password1 }}
+                                </div>
+                                <div class="single-contact-form space-between" style="margin:20px 0;">
+                                    {{ register_form.password2.label_tag }}
+				                    {{ register_form.password2 }}
+                                </div>
+                                <div class="single-contact-form space-between" style="margin:20px 0;">
+                                    {{ register_form.email.label_tag }}
+				                    {{ register_form.email }}
+                                </div>
+                                <div class="single-contact-form space-between" style="margin:20px 0;">
+                                    {{ register_form.sex.label_tag }}
+				                    {{ register_form.sex }}
+                                </div>
+                                <div class="contact-btn">
+                                    <button type="submit">提交</button>
+                                </div>
+                            </form>
+                        </div>
+        			</div>
+                </div>
+            </div>
+    </section>
+{% endblock %}

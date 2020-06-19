@@ -1,0 +1,122 @@
+{% extends 'base_menu.html' %}
+{% load static %}
+{% block title %}主页{% endblock %}
+{% block content %}
+    <!-- 轮播图 -->
+    <div class="slider-area brown__nav slider--15 slide__activation slide__arrow01 owl-carousel owl-theme">
+        <!-- Start Single Slide -->
+        <div class="slide animation__style10 bg-image--1 fullscreen align__center--left">
+            <div class="container">
+                <div class="row">
+                    <div class="col-lg-12">
+                        <div class="slider__content">
+                            <div class="contentbox">
+                                <h2>英语 <span>文章 </span></h2>
+                                <h2>推荐 <span>系统 </span></h2>
+                                <h2>from <span>Here </span></h2>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- End Single Slide -->
+        <!-- Start Single Slide -->
+        <div class="slide animation__style10 bg-image--7 fullscreen align__center--left">
+            <div class="container">
+                <div class="row">
+                    <div class="col-lg-12">
+                        <div class="slider__content">
+                            <div class="contentbox">
+                                <h2>英语 <span>文章 </span></h2>
+                                <h2>推荐 <span>系统 </span></h2>
+                                <h2>from <span>Here </span></h2>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- End Single Slide -->
+    </div>
+    <!-- End 轮播图 -->
+
+    <!-- 所有图书 -->
+    <section class="wn__bestseller__area bg--white pt--80  pb--30">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-12">
+                    <div class="section__title text-center">
+                        <h2 class="title__be--2">All <span class="color--theme">BOOK</span></h2>
+                    </div>
+                </div>
+            </div>
+            <div class="row ">
+                <div class="col-md-12 col-lg-12 col-sm-12">
+                    <div class="product__nav nav justify-content-center book_type" role="tablist">
+                       {# 图书分类导航栏 #}
+                        <form action="" method="post">
+                            {% csrf_token %}
+                            <input type="hidden" value='热门推荐' name="info">
+                            <button type="submit" class="nav-item nav-link active"  role="tab">热门推荐</button>
+                        </form>
+                        <span>|</span>
+                        <form action="" method="post">
+                            {% csrf_token %}
+                            <input type="hidden" value="英语美文" name="info">
+                            <button type="submit" class="nav-item nav-link active"  role="tab">英语美文</button>
+                        </form>
+                        <span>|</span>
+                        <form action="" method="post">
+                            {% csrf_token %}
+                            <input type="hidden" value="英语小短文" name="info">
+                            <button type="submit" class="nav-item nav-link active"  role="tab">英语小短文</button>
+                        </form>
+                        <span>|</span>
+                        <form action="" method="post">
+                            {% csrf_token %}
+                            <input type="hidden" value="英语散文" name="info">
+                            <button type="submit" class="nav-item nav-link active"  role="tab">英语散文</button>
+                        </form>
+                        <span>|</span>
+                        <form action="" method="post">
+                            {% csrf_token %}
+                            <input type="hidden" value="英语演讲" name="info">
+                            <button type="submit" class="nav-item nav-link active"  role="tab">英语演讲</button>
+                        </form>
+                        <span>|</span>
+                        <form action="" method="post">
+                            {% csrf_token %}
+                            <input type="hidden" value="英语阅读" name="info">
+                            <button type="submit" class="nav-item nav-link active"  role="tab">英语阅读</button>
+                        </form>
+                    </div>
+                </div>
+            </div>
+            <div class="tab__container mt--60">
+                <!-- Start Single Tab Content -->
+                <div class="row single__tab tab-pane fade show active" id="nav-all" role="tabpanel" style="flex-direction: column">
+                    <div class="">
+                        <div class="single__product">
+                            <div class="book_ul">
+                            {# 循环图书 #}
+                            {% for book in data %}
+                            <!-- Start Single Product -->
+                                <div class="book_li">
+                                    <h3><a href="{% url 'myauth:details' book.id %}">{{ book.title }}</a></h3>
+                                    <div class="book_con">{{ book.content }}</div>
+                                    <div class="book_info "><a class="shopbtn" href="{% url 'myauth:details' book.id %}">阅读全文</a></div>
+                                </div>
+                            <!-- Start Single Product -->
+                            {% endfor %}
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!-- End Single Tab Content -->
+            </div>
+        </div>
+    </section>
+    <!-- End 所有图书 -->
+
+{% endblock %}
